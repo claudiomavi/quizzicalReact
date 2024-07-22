@@ -1,0 +1,5 @@
+API PARA LAS PREGUNTAS:
+  https://opentdb.com/
+
+PARA DECODIFICAR LOS SIMBULOS EN LAS PREGUNTAS
+  https://www.npmjs.com/package/html-entities
