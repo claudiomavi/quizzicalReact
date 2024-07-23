@@ -1,7 +1,7 @@
 RECURSOS
 
 API PARA LAS PREGUNTAS:
-  https://opentdb.com/
+  https://opentdb.com/api.php?amount=5&type=multiple
 
 PARA DECODIFICAR LOS SIMBULOS EN LAS PREGUNTAS
   https://www.npmjs.com/package/html-entities
