@@ -2,14 +2,46 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: monospace;
+	font-family: "Inter", sans-serif;
+}
+
+body {
+	background-color: darkgray;
 }
 
 .home {
+	padding: 12.5rem;
 	margin: 20vh auto;
+	max-width: 40rem;
+	background: #f5f7fb;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-image: url(/src/assets/);
+	background-image: url(/src/assets/Group\ 169.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.home--title {
+	font-size: 2rem;
+	margin-bottom: 0.85rem;
+	color: #293264;
+	font-weight: bold;
+	font-family: "Karla", sans-serif;
+}
+.home--description {
+	font-size: 1rem;
+	margin-bottom: 2rem;
+	color: #293264;
+}
+
+.home--button {
+	font-size: 1rem;
+	font-weight: medium;
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 1rem;
+	background-color: #293264;
+	color: #f5f7fb;
 }
