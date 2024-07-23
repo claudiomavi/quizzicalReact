@@ -11,7 +11,7 @@ body {
 
 .home {
 	padding: 12.5rem;
-	margin: 20vh auto;
+	margin: 10vh auto;
 	max-width: 40rem;
 	background: #f5f7fb;
 	display: flex;
@@ -38,7 +38,7 @@ body {
 
 .home--button {
 	font-size: 1rem;
-	font-weight: medium;
+	font-weight: 500;
 	padding: 1rem 2rem;
 	border: none;
 	border-radius: 1rem;
@@ -48,7 +48,7 @@ body {
 
 .question {
 	padding: 3rem;
-	margin: 20vh auto;
+	margin: 10vh auto;
 	max-width: 40rem;
 	background: #f5f7fb;
 	display: flex;
@@ -68,4 +68,19 @@ body {
 .question hr {
 	margin: 1rem 0;
 	color: #dbdef0;
+}
+
+.question--button {
+	font-weight: 500;
+	border: 1px solid #4d5b9e;
+	border-radius: 0.5rem;
+	background-color: #f5f7fb;
+	color: #293264;
+	padding: 0.25rem 1rem;
+	margin-right: 0.8rem;
+}
+
+.question--button:hover {
+	background-color: #d6dbf5;
+	border: 1px solid #d6dbf5;
 }
