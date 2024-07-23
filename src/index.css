@@ -9,8 +9,7 @@ body {
 	background-color: darkgray;
 }
 
-.home,
-.questions {
+.home {
 	padding: 12.5rem;
 	margin: 20vh auto;
 	max-width: 40rem;
@@ -45,4 +44,28 @@ body {
 	border-radius: 1rem;
 	background-color: #293264;
 	color: #f5f7fb;
+}
+
+.question {
+	padding: 3rem;
+	margin: 20vh auto;
+	max-width: 40rem;
+	background: #f5f7fb;
+	display: flex;
+	flex-direction: column;
+	background-image: url(/src/assets/Group\ 169.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.question--question {
+	font-size: 1rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	color: #293264;
+}
+
+.question hr {
+	margin: 1rem 0;
+	color: #dbdef0;
 }
