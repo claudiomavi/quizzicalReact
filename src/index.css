@@ -9,7 +9,8 @@ body {
 	background-color: darkgray;
 }
 
-.home {
+.home,
+.questions {
 	padding: 12.5rem;
 	margin: 20vh auto;
 	max-width: 40rem;
