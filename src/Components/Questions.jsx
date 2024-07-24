@@ -1,68 +1,55 @@
+import React from "react";
+
 export default function Questions() {
+	const [dataArr, setDataArr] = React.useState([]);
+
+	React.useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const res = await fetch(
+					"https://opentdb.com/api.php?amount=5&type=multiple"
+				);
+				const data = await res.json();
+
+				// Transformamos los datos
+				const transformedData = data.results.map((item) => {
+					const allAnswers = [...item.incorrect_answers, item.correct_answer];
+					const shuffledAnswers = allAnswers.sort(() => Math.random() - 0.5);
+
+					return {
+						question: item.question,
+						correct_answer: item.correct_answer,
+						answers: shuffledAnswers,
+					};
+				});
+
+				setDataArr(transformedData);
+			} catch (error) {
+				console.error("Error fetching data: ", error);
+			}
+		};
+
+		fetchData();
+	}, []);
+
 	return (
-		<div className="question">
-			<div>
-				<p className="question--question">
-					How would one say goodbye in Spanish?
-				</p>
-				<div>
-					<button className="question--button">Adiós</button>
-					<button className="question--button">Hola</button>
-					<button className="question--button">Au Revoir</button>
-					<button className="question--button">Salir</button>
+		<div className="questions--container">
+			{dataArr.map((item, index) => (
+				<div key={index} className="question">
+					<div>
+						<p className="question--question">{item.question}</p>
+						<div className="answers-container">
+							{item.answers.map((answer, idx) => (
+								<button key={idx} className="question--button">
+									{answer}
+								</button>
+							))}
+						</div>
+						<hr />
+					</div>
 				</div>
-				<hr />
-			</div>
-			<div>
-				<p className="question--question">
-					Which best selling toy of 1983 caused hysteria, resulting in riots
-					breaking in stores?
-				</p>
-				<div>
-					<button className="question--button">Adiós</button>
-					<button className="question--button">Hola</button>
-					<button className="question--button">Au Revoir</button>
-					<button className="question--button">Salir</button>
-				</div>
-				<hr />
-			</div>
-			<div>
-				<p className="question--question">
-					What is the hottest planet in our Solar System?
-				</p>
-				<div>
-					<button className="question--button">Adiós</button>
-					<button className="question--button">Hola</button>
-					<button className="question--button">Au Revoir</button>
-					<button className="question--button">Salir</button>
-				</div>
-				<hr />
-			</div>
-			<div>
-				<p className="question--question">
-					In which country was the caesar salad invented?
-				</p>
-				<div>
-					<button className="question--button">Adiós</button>
-					<button className="question--button">Hola</button>
-					<button className="question--button">Au Revoir</button>
-					<button className="question--button">Salir</button>
-				</div>
-				<hr />
-			</div>
-			<div>
-				<p className="question--question">
-					How Many Hearts Does An Octopus Have?
-				</p>
-				<div>
-					<button className="question--button">Adiós</button>
-					<button className="question--button">Hola</button>
-					<button className="question--button">Au Revoir</button>
-					<button className="question--button">Salir</button>
-				</div>
-				<hr />
-			</div>
-			<button className="question--button">Check answers</button>
+			))}
+			<button className="question--check--button">Check answers</button>
 		</div>
 	);
 }
