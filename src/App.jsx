@@ -1,10 +1,17 @@
-// HACER QUE CUANDO SE PULSE EL BOTÓN EN HOME CON UN STATE APAREZCA EL COMPONENTE DE PREGUNTAS
-
+import React from "react";
 import Home from "/src/Components/Home";
 import Questions from "/src/Components/Questions";
 
 export default function App() {
-	const showQuestions = true;
+	const [showQuestions, setShowQuestions] = React.useState(false);
 
-	return <div>{showQuestions ? <Home /> : <Questions />}</div>;
+	function toggleButton() {
+		return setShowQuestions(false); // volver a ponerlo en true cuando acabes para que salga la home
+	}
+
+	return (
+		<div>
+			{showQuestions ? <Questions /> : <Home handleClick={toggleButton} />}
+		</div>
+	);
 }
