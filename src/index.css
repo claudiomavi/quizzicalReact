@@ -18,7 +18,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-image: url(/src/assets/Group\ 169.png);
+	background-image: url("https://imgur.com/7vJdHVc.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -58,7 +58,7 @@ body {
 	margin: 10vh auto;
 	background: #f5f7fb;
 	max-width: 40rem;
-	background-image: url(/src/assets/Group\ 169.png);
+	background-image: url("https://imgur.com/7vJdHVc.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
 }
