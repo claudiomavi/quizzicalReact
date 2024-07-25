@@ -73,6 +73,7 @@ body {
 	font-weight: bold;
 	margin-bottom: 1rem;
 	color: #293264;
+	font-family: "Karla", sans-serif;
 }
 
 .question hr {
@@ -95,13 +96,45 @@ body {
 	border: 1px solid #d6dbf5;
 }
 
+.question--button.selected {
+	border: 1px solid #d6dbf5;
+	background-color: #d6dbf5;
+	color: #293264;
+}
+
+.question--button.correct {
+	border: 1px solid #94d7a2;
+	background-color: #94d7a2;
+	color: #293264;
+}
+
+.question--button.wrong {
+	border: 1px solid #f8bcbc;
+	background-color: #f8bcbc;
+	color: #293264;
+	opacity: 0.5;
+}
+
+.results--container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.questions--result {
+	font-weight: bold;
+	font-size: 1rem;
+	color: #293264;
+}
+
 .question--check--button {
 	display: block;
 	width: 12rem;
 	margin: 0 auto;
 	padding: 0.65rem 1.4rem;
-	font-size: 1rem;
-	font-weight: 600;
+	font-size: 0.75rem;
+	font-weight: 500;
 	border: none;
 	border-radius: 1rem;
 	background-color: #4d5b9e;
